@@ -8,6 +8,7 @@ class DB{
 	
 	function __construct() {
 		$this->conn = $this->connectDB();
+		mysqli_set_charset($this->conn, "utf8");
 	}
 	
 	function connectDB() {
